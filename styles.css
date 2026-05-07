@@ -55,6 +55,11 @@ h3 {
   width: 60px;
 }
 
+#session {
+  padding-left: 50px;
+  font-size: 30px;
+}
+
 /* animation */
 @keyframes gradient-shadow {
   0% {
