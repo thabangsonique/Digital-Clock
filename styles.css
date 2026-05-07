@@ -6,7 +6,66 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(71, 53, 71), rgb(114, 114, 188));
+  background: linear-gradient(to bottom, rgb(71, 53, 71), rgb(31, 31, 57));
   color: white;
   font-family: "inter", sans-serif;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+/* styling clock display */
+/* container */
+.clock-container {
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.4),
+    rgba(128, 0, 128, 0.4)
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  padding: 60px 60px;
+  width: 700px;
+  text-align: center;
+  border-radius: 50px;
+  border: solid 1px rgb(150, 150, 195);
+  box-shadow:
+    0 0 20px rgba(0, 0, 255, 0.5),
+    0 0 40px rgba(128, 0, 128, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.clock span {
+  text-align: center;
+}
+
+/* animation */
+@keyframes gradient-shadow {
+  0% {
+    box-shadow:
+      0 0 50px rgba(0, 0, 255, 0.5),
+      0 0 80px rgba(128, 0, 128, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(147, 147, 241, 0.5),
+      0 0 40px rgba(234, 57, 234, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 50px rgba(0, 0, 255, 0.5),
+      0 0 80px rgba(128, 0, 128, 0.4);
+  }
+}
+
+.shadow {
+  animation: gradient-shadow 10s infinite;
 }
