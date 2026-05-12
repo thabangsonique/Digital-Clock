@@ -14,21 +14,35 @@
     <title>Digital Clock App</title>
   </head>
   <body>
-    <main class="clock-hero"></main>
-    <h1>Digital Clock</h1>
+    <!-- THEME TOGGLE BUTTON -->
+    <button id="theme-switch">
+      <img
+        src="./Icons/moon-solid.png"
+        style="height: 30px; width: 30px"
+        alt="moon icon"
+      />
+      <img
+        src="./Icons/sun-regular.png"
+        alt="sun icon"
+        style="height: 30px; width: 30px"
+      />
+    </button>
+    <main class="clock-hero">
+      <h1>Digital Clock</h1>
 
-    <!-- clock container -->
-    <div class="clock-container shadow">
-      <!-- date -->
-      <h3 id="date">friday 5 May 2026</h3>
-      <div class="clock">
-        <span id="hours">00</span>
-        <span>:</span>
-        <span id="minutes">00</span>
-        <span>:</span>
-        <span id="seconds">00</span>
-        <span id="session">AM</span>
+      <!-- clock container -->
+      <div class="clock-container shadow">
+        <!-- date -->
+        <h3 id="date">friday 5 May 2026</h3>
+        <div class="clock">
+          <span id="hours">00</span>
+          <span>:</span>
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+          <span id="session">AM</span>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

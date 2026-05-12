@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --base-background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(31, 31, 57));
+  --primary-color: white;
+  --border-ring: rgb(150, 150, 195);
+}
+
 body {
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(71, 53, 71), rgb(31, 31, 57));
-  color: white;
+  background: var(--base-background);
+  color: var(--primary-color);
   font-family: "inter", sans-serif;
   position: relative;
 }
@@ -42,7 +48,7 @@ h3 {
   width: 800px;
   text-align: center;
   border-radius: 50px;
-  border: solid 1px rgb(150, 150, 195);
+  border: solid 1px var(--border-ring);
   box-shadow:
     0 0 20px rgba(0, 0, 255, 0.5),
     0 0 40px rgba(128, 0, 128, 0.4);
@@ -58,6 +64,38 @@ h3 {
 #session {
   padding-left: 50px;
   font-size: 30px;
+}
+
+#theme-switch {
+  position: absolute;
+  border-radius: 50px;
+  top: 0;
+  right: 20px;
+  padding: 8px;
+  background-color: rgb(136, 136, 217);
+  border: none;
+}
+
+#theme-switch img:first-child {
+  display: none;
+}
+
+/* LIGHTMODE THEME */
+/* disable sun icon when in lightmode */
+.lightmode #theme-switch img:last-child {
+  display: none;
+}
+
+/* enanble moon icon when in lightmode */
+.lightmode #theme-switch img:first-child {
+  display: block;
+}
+
+/* lightmode class */
+.lightmode {
+  --base-background: white;
+  --primary-color: black;
+  --border-ring: black;
 }
 
 /* animation */

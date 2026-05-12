@@ -59,3 +59,32 @@ function clock() {
 setInterval(clock, 1000); //show updated time display every second
 
 clock();
+
+//LIGHT AND DARKMODE
+
+let lightmodeEnabled = localStorage.getItem("lightmode") === "active";
+const themeSwitch = document.getElementById("theme-switch");
+
+if (lightmodeEnabled) {
+  enableLightMode();
+}
+
+themeSwitch.addEventListener("click", () => {
+  lightmodeEnabled = !lightmodeEnabled;
+
+  if (lightmodeEnabled) {
+    enableLightMode();
+    localStorage.setItem("lightmode", "active");
+  } else {
+    disableLightMode();
+    localStorage.setItem("lightmode");
+  }
+});
+
+function enableLightMode() {
+  document.body.classList.add("lightmode");
+}
+
+function disableLightMode() {
+  document.body.classList.remove("lightmode");
+}
